@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #201f1f;
+    font-family: 'Exo';
+}
+
+
+/* Opening Screen */
+.start-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-btn {
+    font-family: 'Exo';
+    border: 1px solid transparent;
+    box-shadow: 
+        0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #0026ff,
+        0 0 0.8rem #2525e7,
+        0 0 2.8rem #453ff2,
+        inset 0 0 1.3rem #0026ff; 
+    border-radius: 10px;
+    background-color: #201f1f;
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+    margin-top: 300px;
+    color: #fff;
+    text-shadow:
+      0 0 7px #cecbcb,
+      0 0 11px #fff,
+      0 0 19px #0000ff,
+      0 0 40px #0026ff,
+      0 0 80px #2525e7,
+      0 0 90px #453ff2,
+      0 0 100px #585efc,
+      0 0 150px #0026ff;
+    transition-duration: 300ms;
+    transition-property: transform;
+}
+
+    
+.play-btn:hover {
+    transform: scale(1.2, 1.2);
+}
+
+
+
+/* Game screen */
+
+.player-container {
+    margin-right: 100px;
+}
+
+.com-container {
+    margin-left: 100px;
+}
+
+.outcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    color: white;
+    font-size: 30px;
+}
+
+.pts-container {
+    display: flex;
+}
+
+#player-pts {
+    text-shadow:
+      0 0 7px #cecbcb,
+      0 0 11px #fff,
+      0 0 19px #0000ff,
+      0 0 40px #0026ff,
+      0 0 80px #2525e7,
+      0 0 90px #453ff2,
+      0 0 100px #585efc,
+      0 0 150px #0026ff;
+}
+
+#comp-pts {
+    text-shadow:
+    0 0 7px #cecbcb,
+    0 0 11px #fff,
+    0 0 19px #f72c04,
+    0 0 40px #f91b17,
+    0 0 80px #e33c3c,
+    0 0 90px #dc4d4d,
+    0 0 100px #ff6c6c,
+    0 0 150px #ff0000;
+}
+
+.hands-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Player hands */
+#rock-player {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: url(./rock-player.png);
+    transition-duration: 200ms;
+    transition-property: transform;
+}
+
+#rock-player:hover {
+    transform: rotate(50deg);
+}
+
+#paper-player {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: url(./paper-player.png);
+    transition-duration: 200ms;
+    transition-property: transform;
+}
+
+#paper-player:hover {
+    transform: rotate(50deg);
+}
+
+#scissors-player {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: url(./scissors-player.png);
+    transition-duration: 200ms;
+    transition-property: transform;
+}
+
+#scissors-player:hover {
+    transform: rotate(50deg);
+}
+
+
+
+/* Comp hands */
+#rock-com {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: url(./rock-com.png);
+    transition-duration: 200ms;
+    transition-property: transform;
+}
+
+#paper-com {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: url(./paper-com.png);
+    transition-duration: 200ms;
+    transition-property: transform;
+}
+
+#scissors-com {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: url(./scissor-com.png);
+    transition-duration: 200ms;
+    transition-property: transform;
+}
+
+.identifier-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#player {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: url(./human.png);
+    margin-right: 300px;
+}
+
+#computer {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: url(./robot.png);
+    margin-left: 300px;
+}
+
+
+/* Ending screen */
+.end-game {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#win {
+    color: #fff;
+    text-shadow:
+      0 0 7px #cecbcb,
+      0 0 11px #fff,
+      0 0 19px #0000ff,
+      0 0 40px #0026ff,
+      0 0 80px #2525e7,
+      0 0 90px #453ff2,
+      0 0 100px #585efc,
+      0 0 150px #0026ff;
+      margin-top: 300px;
+      margin-bottom: 50px;
+}
+
+#lose {
+    color: #fff;
+    text-shadow:
+    0 0 7px #cecbcb,
+    0 0 11px #fff,
+    0 0 19px #f72c04,
+    0 0 40px #f91b17,
+    0 0 80px #e33c3c,
+    0 0 90px #dc4d4d,
+    0 0 100px #ff6c6c,
+    0 0 150px #ff0000;
+    margin-top: 300px;
+    margin-bottom: 50px;
+}
+
+.play-again {
+    font-family: 'Exo';
+    border: 1px solid #fff;
+    box-shadow: 
+        0 0 .2rem #9f9c9c,
+        0 0 .2rem #fff,
+        0 0 2rem #f09,
+        0 0 0.8rem #f09,
+        0 0 2.8rem #f09,
+        inset 0 0 1.3rem #f09; 
+    border-radius: 10px;
+    background-color: #201f1f;
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+    color: #fff;
+    text-shadow:
+      0 0 7px #9f9c9c,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #f09,
+      0 0 82px #f09,
+      0 0 92px #f09,
+      0 0 102px #f09,
+      0 0 151px #f09;
+    transition-duration: 300ms;
+    transition-property: transform;
+}
+
+.play-again:hover {
+    transform: scale(1.2, 1.2);
+}
+
+
+
+
+

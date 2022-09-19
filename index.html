@@ -4,20 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
     <title>RPS GAME</title>
 </head>
 <body>
-    <h1>ROCK PAPER SCISSORS</h1>
 
-    <div class="container">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+    <div class="start-game">
+        <button class="play-btn" onclick="startGame()">PLAY</button>
     </div>
 
-    <div class="outcome">
+    <div class="end-game" style="display: none">
+        <h1 id="win" style="display: none">VICTORY!</h1>
+        <h1 id="lose" style="display: none">DEFEAT!</h1>
+        <button class="play-again">PLAY AGAIN?</button>
     </div>
 
-</body>
+    <div class="game" style="display: none">
+        <div class="outcome">
+            <p class="result">ROCK PAPER SCISSORS</p>
+            <div class="pts-container"></div>
+        </div>
+
+        <div class="hands-container">
+            <div class="player-container">
+                <div id="rock-player"></div>
+                <div id="paper-player"></div>
+                <div id="scissors-player"></div>
+            </div>
+        
+            <div class="com-container">
+                <div id="rock-com"></div>
+                <div id="paper-com"></div>
+                <div id="scissors-com"></div>
+            </div>
+        </div>
+
+        <div class="identifier-container">
+            <div id="player"></div>
+            <div id="computer"></div>
+        </div>
+    </div>
 </html>
